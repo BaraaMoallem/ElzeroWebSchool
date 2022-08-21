@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>IBDAA Lab</h1>
+    <section>
+        <h2>Sign Up Now!</h2>
+        <form action="" method="get">
+            <div>
+                <input name="token" type="hidden" value="b92f1fc2fce391ad7af633723afd3055">
+            </div>
+            <div>
+                <label for="email">
+                    Email
+                </label>
+                <input id="email" name="email" type="text" readonly value="o@o.com">
+            </div>
+            <div>
+                <label for="username">
+                    UserName
+                </label>
+                <input id="username" name="user" type="text" required autofocus minlength="5" maxlength="20">
+            </div>
+            <div>
+                <input type="reset" value="Empty">
+                <input type="submit" value="Send">
+            </div>
+            <!-- The second assaignment -->
+            <div>
+                <label>Skills</label> <!-- <h5>Skills</h5> -->
+
+                <input value="Advanced Search" name="skills" id="Search" type="checkbox">
+                <label for="Search">
+                    Advanced Search
+                </label>
+
+                <input value="Planning" name="skills" id="Planning" type="checkbox" checked>
+                <label for="Planning">
+                    Planning
+                </label>
+
+                <input value="Problem Solving" name="skills" id="ProblemSolve" type="checkbox">
+                <label for="ProblemSolve">
+                    Problem Solving
+                </label>
+
+                <input value="Logical Thinking" name="skills" id="Logical" type="checkbox">
+                <label for="Logical">
+                    Logical Thinking
+                </label>
+
+                <input value="Analysis" name="skills" id="Analysis" type="checkbox">
+                <label for="Analysis">
+                    Analysis
+                </label>
+
+            </div>
+
+            <div>
+                <label>Job</label> <!-- <h5>job</h5> -->
+
+                <input value="Back-End" name="job" type="radio" id="Back-End">
+                <label for="Back-End">Back-End</label>
+
+                <input value="Front-End Developer" name="job" type="radio" id="Front-End Developer" checked>
+                <label for="Front-End Developer">Front-End Developer</label>
+
+                <input value="Scrum" name="job" type="radio" id="Scrum">
+                <label for="Scrum">Scrum</label>
+
+                <input value="Project Manager" name="job" type="radio" id="Project Manager">
+                <label for="Project Manager">Project Manager</label>
+
+                <input value="Business Analyst" name="job" type="radio" id="Business Analyst">
+                <label for="Business Analyst">Business Analyst</label>
+
+                <input value="Developer Master" name="job" type="radio" id="DeveloperMaster">
+                <label for="DeveloperMaster">Developer Master</label>
+
+            </div>
+
+            <!-- The Third assaignment -->
+            <label>Choose version:</label>
+            <select name="ver" id="ver" multiple>
+                <optgroup label="PHP">
+                    <option value="v5.0">v5.0</option>
+                    <option value="v5.0">v5.0</option>
+                    <option value="v5.0">v5.0</option>
+                </optgroup>
+                <optgroup label="Python">
+                    <option value="v2.0">v2.0</option>
+                    <option value="v3.0">v3.0</option>
+                    <option value="v3.9">v3.9</option>
+                </optgroup>
+            </select>
+            <hr>
+            <div>
+                <textarea name="brief" id="brief" cols="30" rows="10"
+                    placeholder="Write Here Why You Want To Learn Programming"></textarea>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>

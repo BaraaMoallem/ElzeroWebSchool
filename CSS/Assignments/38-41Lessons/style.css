@@ -1,0 +1,235 @@
+* {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-1 {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.container-1 div {
+    display: inline-block;
+    position: relative;
+    margin: 60px auto;
+    margin-left: 20px;
+    padding: 20px;
+    /* box-sizing: border-box; */
+    /* float: left; */
+    /* overflow: hidden; */
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 50%;
+    box-shadow: 5px 5px 0px #2196f3,
+        -5px -5px 0px #e91e63;
+    counter-increment: count;
+
+
+    /* From codepen */
+    /* position: relative;
+    counter-increment: numbers;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #EEEEEE;
+    margin-left: 60px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    box-shadow: -6px -6px #E91E63,
+        6px 6px #2196F3; */
+}
+
+.container-1 div::before {
+    content: counter(count);
+    position: absolute;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    width: 20px;
+    height: 20px;
+    margin-left: -14px;
+    margin-top: -14px;
+    padding: 3px;
+    top: 0px;
+    left: 50%;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.container-1 div::after {
+    content: "element";
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: calc((76.31px / 2)*-1);
+    margin-top: calc((24.8px / 2) * -1);
+    font-size: 1.3em;
+    /* line-height: 100%; */
+}
+
+/* Next time check why when you try to place divs horizontally they don't respect left border */
+/* =The reason was not setting a margin-left peoperty*/
+
+
+
+/* The Second Assignment */
+.container-2 {
+    margin: auto;
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.container-2 div {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    background-color: #efefef;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 10px 0px #000;
+    /* line-height: 50%; */
+    border-radius: 10px 50px / 30px 50px;
+    /* what is above equals what is underneath */
+    border-top-left-radius: 10px 30px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 10px 30px;
+    border-bottom-left-radius: 50px;
+}
+
+
+/* The Third Assignment */
+.container-3 {
+    width: 550px;
+    height: -moz-fit-content;
+    height: fit-content;
+    /* box-sizing: border-box; */
+    margin: auto;
+    /* padding: 20px; */
+    position: relative;
+    /* background-color: greenyellow; */
+}
+
+.container-3 div {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #eee;
+    width: 250px;
+    height: 300px;
+}
+
+.one {
+    margin: 0 20px 0 0;
+}
+
+.two {
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+.one::before {
+    content: "free";
+    position: absolute;
+    text-transform: capitalize;
+    margin: calc(35%) calc(50%);
+    transform: translate(-50%);
+    background-color: #ddd;
+    font-weight: 500;
+    font-size: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 200px;
+}
+
+.one::after {
+    content: "basic";
+    text-transform: capitalize;
+    color: white;
+    background-color: #03a9f4;
+    position: absolute;
+    padding: 15px 80px;
+    margin: 15px calc(50% - 208.04px / 2);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.two::before {
+    content: "$30";
+    position: absolute;
+    text-transform: capitalize;
+    margin: calc(35%) calc(50%);
+    transform: translate(-50%);
+    background-color: #ddd;
+    font-weight: 500;
+    font-size: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 200px;
+}
+
+.two::after {
+    content: "pro";
+    text-transform: capitalize;
+    color: white;
+    background-color: #03a9f4;
+    position: absolute;
+    padding: 15px 80px;
+    margin: 15px calc(50% - 190.01px / 2);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.container-3::before {
+    content: "";
+    height: 300px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    background-color: #03a9f4;
+    top: 0%;
+}
+
+.container-3::after {
+    content: "or";
+    text-transform: capitalize;
+    border-radius: 50%;
+    background-color: #03a9f4;
+    color: #fff;
+    padding: 5px;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

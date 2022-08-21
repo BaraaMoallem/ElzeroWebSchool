@@ -1,0 +1,124 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ass-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    width: 300px;
+    height: 60px;
+    margin: 50px auto;
+    line-height: 60px;
+    background-color: #eee;
+    text-align: center;
+    padding: 30px;
+}
+
+.ass-1:empty {
+    background-color: red;
+}
+
+/* The second Assignment */
+.ass-2 {
+    /* position: relative; */
+    margin: 50px auto;
+    padding: 20px 20px;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #d4d4d4;
+    text-align: center;
+}
+
+.ass-2:first-letter {
+    /* position: absolute; */
+    /* display: inline-block; */
+    margin-left: -45px;
+    margin-right: 15px;
+    padding: 12px 10px;
+    color: white;
+    background-color: red;
+}
+
+/* The third Assignment */
+.ass-3 p::before {
+    content: attr(data-person);
+    display: inline-block;
+    margin-left: -150px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+    width: 70px;
+    background-color: #d4d4d4;
+    text-align: center;
+}
+
+.ass-3 p::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0;
+    left: 0;
+    top: 50%;
+    transform: translate(-120%, -50%);
+    background-color: transparent;
+    border-right: #e91e63 solid 12px;
+    border-left: transparent solid 15px;
+    border-bottom: transparent solid 15px;
+    border-top: transparent solid 15px;
+    /* content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -28px;
+    top: 50%;
+    margin-top: -12.5px;
+    border: 12px solid;
+    border-color: transparent #E91E63 transparent transparent; */
+}
+
+.ass-3 p {
+    position: relative;
+    margin: 20px auto;
+    background-color: #eee;
+    width: 400px;
+    border-left: #e91e63 solid 7px;
+    text-align: left;
+}
+
+.ass-4 p {
+    position: relative;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #efefef;
+    width: 450px;
+    counter-increment: par;
+    /* counter-reset: par; */
+}
+
+.ass-4 p::before {
+    font-weight: bold;
+    content: counter(par);
+    position: absolute;
+    padding: 20px 25px;
+    top: 0;
+    left: -50px;
+    /* margin-left: -90px; */
+    /* margin-bottom: 20px; */
+    /* top: 50%; */
+    /* transform: translate(0, -50%); */
+    /* height: -20px; */
+    color: white;
+    background-color: #f44336;
+}
+
+.ass-4 p::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 5px;
+    background-color: #f44336;
+}

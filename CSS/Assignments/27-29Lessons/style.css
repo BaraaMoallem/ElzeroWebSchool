@@ -1,0 +1,81 @@
+div {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.parent {
+    margin: auto;
+    width: 800px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.parent-2 {
+    margin: auto;
+    width: 1000px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+div div {
+    padding: 20px 0px;
+    margin-top: 15px;
+    font-weight: 700;
+    background-color: #ddd;
+}
+
+.full {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+}
+
+.clear {
+    clear: auto;
+}
+
+.flow {
+    float: left;
+}
+
+.OFT {
+    width: calc((100% - 60px)/3);
+    margin-left: 15px;
+}
+
+.half {
+    width: calc((100% - 45px) / 2);
+    margin-left: 15px;
+}
+
+.quarter {
+    width: calc((100% - 5 * 15px) / 4);
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+/* 
+    the width is 
+    100% - (X * 15)px
+*/
+
+/* The Second Assignment */
+.sec-ass {
+    margin: 20px auto;
+    width: 300px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+    background-color: #b3b3b3;
+    /* Get The Background From Image */
+    color: black;
+}
+
+.one {
+    background-color: rgb(179 179 179 / 10%);
+}
+
+.two {
+    opacity: 0.1;
+}

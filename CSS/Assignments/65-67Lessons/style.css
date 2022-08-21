@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+.first-cont div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 100px auto;
+    background-color: #eee;
+    font-size: 50px;
+    color: #03a9f4;
+    font-weight: bold;
+    /* Why when I added z-index 1 the after element get over div's color while staying "element" in front of after color */
+}
+
+.first-cont div::before {
+    content: "";
+    background-color: #e91e63;
+    position: absolute;
+    right: 0;
+    width: 310px;
+    height: 210px;
+    z-index: -1;
+    transform: rotate(5deg);
+}
+
+.first-cont div::after {
+    content: "";
+    background-color: #03a9f4;
+    position: absolute;
+    right: 0;
+    width: 310px;
+    height: 210px;
+    z-index: -1;
+    transform: rotate(-5deg);
+}
+
+/* The Second Assignment */
+.sec-cont {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin: 100px 0;
+}
+
+.sec-cont div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.sec-cont div::before {
+    content: "";
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid #e91e63;
+    position: absolute;
+    border-left: 10px solid #fff;
+    transition: .5s 0s ease;
+}
+
+.sec-cont div::after {
+    content: "";
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 10px solid #03a9f4;
+    border-right: 10px solid #fff;
+    position: absolute;
+    transition: .5s .5s ease;
+}
+
+.sec-cont div:hover::before,
+.sec-cont div:hover::after {
+    transform: rotate(1turn);
+}
+
+
+/* Next time make the surronded red and blue color with before and after elements and you can review main vids for revesion  */

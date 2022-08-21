@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+:root {
+    --mainColor: white;
+    --SecondColor: black;
+    --largeFont: 500%;
+    --bigFont: 130%;
+    --midFont: 120%;
+    --smallFont: 100%;
+    --bold: 700;
+    --articlePadding: 30px;
+    --ParaPadding: 7px 0px;
+    --SpanPadding: 5px 0 5px 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: grid;
+    grid-template: repeat(28, calc(35/4)) / repeat(4, auto);
+    padding: 100px;
+    grid-template-areas:
+        "baraa baraa amr ammaro"
+        "baraa baraa amr ammaro"
+        "baraa baraa amr ammaro"
+        "baraa baraa amr ammaro"
+
+        "muhammed mamon mamon ammaro"
+        "muhammed mamon mamon ammaro"
+        "muhammed mamon mamon ammaro"
+        "muhammed mamon mamon ammaro"
+
+        "muhammed yasser yasser ammaro"
+        "muhammed yasser yasser ammaro"
+        "muhammed yasser yasser ammaro"
+        "muhammed yasser yasser ammaro"
+
+        "probaroa naruto lord jeager"
+        "probaroa naruto lord jeager"
+    ;
+    gap: 10px;
+}
+
+article {
+    position: relative;
+    background-color: var(--mainColor);
+    padding: var(--articlePadding);
+    position: relative;
+    line-height: 1.5em;
+    /* I could use after psuedo element in place of using border property */
+    border-bottom: 3px solid #ff3d00;
+}
+
+/* Using before to make the quote-mark was much better than using an image */
+article::before {
+    position: absolute;
+    content: "''";
+    right: 3%;
+    bottom: -1%;
+    transform: rotate(15deg);
+    color: #b3b3b3;
+    font-size: var(--largeFont);
+}
+
+h3 {
+    font-size: var(--bigFont);
+    font-weight: var(--bold);
+}
+
+span {
+    display: block;
+    color: #a8a8a8;
+    font-size: var(--smallFont);
+    font-weight: var(--bold);
+    padding: var(--SpanPadding);
+}
+
+p {
+    padding: var(--ParaPadding);
+    font-size: var(--smallFont);
+}
+
+.p-bold {
+    font-weight: var(--bold);
+    font-size: var(--midFont);
+}
+
+img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    visibility: hidden;
+}
+
+.baraa {
+    grid-area: baraa;
+    /* grid-row: 1 / 2;
+    grid-column: 1 / 3; */
+    /* background-color: blueviolet; */
+}
+
+.probaroa {
+    grid-area: probaroa;
+    background-color: var(--mainColor);
+}
+
+.ammaro {
+    grid-area: ammaro;
+    background-color: var(--SecondColor);
+    color: var(--mainColor);
+    /* grid-row: 1 / 4;
+    grid-column: 4 / 5; */
+}
+
+.amr {
+    grid-area: amr;
+    background-color: var(--mainColor);
+    /* grid-row: 1 / 2;
+    grid-column: 3 / 4; */
+}
+
+
+.muhammed {
+    grid-area: muhammed;
+    background-color: var(--mainColor);
+    /* grid-row: 3 / 4;
+    grid-column: 2 / 3; */
+}
+
+.maamoun {
+    grid-area: mamon;
+    background-color: var(--SecondColor);
+    color: var(--mainColor);
+    /* grid-row: 3 / 4;
+    grid-column: 1 / 2; */
+}
+
+.yasser {
+    grid-area: yasser;
+    background-color: var(--mainColor);
+    /* grid-row: 3 / 4;
+    grid-column: 3 / 4; */
+}
+
+.lord {
+    grid-area: lord;
+    background-color: var(--mainColor);
+}
+
+.naruto {
+    grid-area: naruto;
+    background-color: var(--SecondColor);
+    color: var(--mainColor);
+}
+
+.jeager {
+    grid-area: jeager;
+    background-color: var(--mainColor);
+}
+
+abbr {
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+}

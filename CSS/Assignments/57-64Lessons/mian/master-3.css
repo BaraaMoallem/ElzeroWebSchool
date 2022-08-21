@@ -1,0 +1,29 @@
+* {
+    font-family: arial;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.grid {
+    background-color: #ddd;
+    padding: 20px;
+    width: 800px;
+    height: 400px;
+}
+
+.grid {
+    margin: 30px auto;
+    display: grid;
+    grid-template: 1fr auto / auto repeat(2, 1fr) auto;
+    grid-template-areas: "1 2 3 4""5 6 7 8";
+    gap: 20px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #403f3f;
+    color: white;
+    height: 100%;
+}

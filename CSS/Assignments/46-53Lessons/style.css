@@ -1,0 +1,349 @@
+:root {
+    --flexbasis: 150px;
+    --mainMargin: 50px auto;
+    --mainPadding: 20px;
+    --rootPadding: 10px;
+    --mainWidth: 600px;
+    --mainHeight: 300px;
+    --mainColor: #eee;
+    --main2Color: #ddd;
+    --childHeight: 50%;
+    --smallHeight: 10%;
+    --bigHeight: 75%;
+    --smallPadd: 2%;
+    --smallerPadd: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.theFirst div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 50px auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    color: #ff5722;
+    border-radius: 50%;
+    box-shadow:
+        5px 0px 0 0 #ff5722,
+        -5px 0 0 0 #03a9f4;
+}
+
+.secAss .parent {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #eee;
+    flex: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.secAss .parent div {
+    background-color: #f44336;
+    color: white;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 190px;
+    height: 40px;
+}
+
+
+/*
+ Continue from here and solve the problem in what is below 
+
+
+it was solved by using align-self
+*/
+
+:root {
+    --flexbasis: 150px;
+}
+
+.thirdAss .parent {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    /* align-items: flex-end; */
+}
+
+.thirdAss .parent div {
+    background-color: #607d8b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 190px;
+    height: 40px;
+}
+
+.thirdAss .six,
+.thirdAss .four,
+.thirdAss .three {
+    align-self: flex-start;
+}
+
+.thirdAss .five,
+.thirdAss .two,
+.thirdAss .one {
+    align-self: flex-end;
+}
+
+.thirdAss .one {
+    order: 6;
+    align-self: flex-end;
+}
+
+.thirdAss .two {
+    order: 5;
+    height: var(--flexbasis) !important;
+}
+
+.thirdAss .three {
+    order: 2;
+}
+
+.thirdAss .four {
+    order: 3;
+    height: var(--flexbasis) !important;
+}
+
+.thirdAss .five {
+    order: 4;
+    height: var(--flexbasis) !important;
+}
+
+.thirdAss .six {
+    order: 1;
+    height: var(--flexbasis) !important;
+}
+
+
+/* The Fourth Assignment */
+.fourthAss .parent {
+    width: var(--mainWidth);
+    height: var(--mainHeight);
+    margin: var(--mainMargin);
+    padding: var(--mainPadding);
+    background-color: var(--mainColor);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.fourthAss .parent div {
+    background-color: #009688;
+    /* color: white; */
+    flex-basis: calc(90% / 3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthAss .one {
+    width: 30px;
+    align-self: flex-end;
+}
+
+.fourthAss .two {
+    width: calc(120% / 2);
+    align-self: flex-start;
+}
+
+.fourthAss .three {
+    width: 30px;
+    align-self: flex-end;
+}
+
+/* The fifth assignment */
+.fifthAss .parent {
+    width: var(--mainWidth);
+    height: var(--mainHeight);
+    margin: var(--mainMargin);
+    padding: var(--mainPadding);
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+}
+
+.fifthAss .parent div {
+    flex-grow: 0;
+    flex-basis: calc(70% / 4);
+    height: var(--childHeight);
+    background-color: #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 40px; */
+    flex-wrap: wrap;
+}
+
+.fifthAss .parent .one {
+    /* align-self: flex-end;
+    justify-self: flex-start; */
+    background-color: #ff9800;
+    order: 2;
+}
+
+.fifthAss .parent .three {
+    /* align-self: flex-end;
+    justify-self: flex-start; */
+    background-color: #795548;
+    order: 4;
+}
+
+.fifthAss .parent .four {
+    align-self: flex-end;
+    justify-self: flex-start;
+    background-color: #673ab7;
+    order: 1;
+}
+
+.fifthAss .parent .two {
+    align-self: flex-end;
+    justify-self: flex-start;
+    background-color: #8bc34a;
+    order: 3;
+}
+
+/* The Sixth Assignment */
+/* 
+.page div {
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    flex-direction: row;
+}
+
+.page div div,
+.page div ul {
+    background-color: var(--main2Color);
+    flex: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    flex-basis: 100%;
+}
+
+.logo {
+    flex-basis: 30%;
+}
+
+.links {
+    flex-basis: 60%;
+} */
+
+
+.page {
+    background-color: var(--mainColor);
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--mainWidth);
+    height: var(--mainHeight);
+    margin: var(--mainMargin);
+    padding: var(--rootPadding);
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.sixthAss header {
+    height: var(--smallHeight);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.sixthAss ul {
+    display: flex;
+    width: 66vh;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+    padding: var(--smallerPadd) var(--smallPadd);
+    box-sizing: border-box;
+    background-color: var(--main2Color);
+}
+
+.sixthAss ul li {
+    padding: 1% 1%;
+}
+
+.logo {
+    width: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main2Color);
+}
+
+.sixthAss main {
+    height: var(--bigHeight);
+    display: flex;
+    justify-content: space-between;
+    /* height: 300px; */
+}
+
+main section {
+    background-color: #ddd;
+    width: 65%;
+    padding: var(--smallPadd);
+}
+
+main aside {
+    background-color: #ddd;
+    width: 25.5%;
+    padding: var(--smallPadd);
+}
+
+.sixthAss footer {
+    height: var(--smallHeight);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #ddd;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--smallPadd);
+}
+
+.design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--smallPadd);
+}

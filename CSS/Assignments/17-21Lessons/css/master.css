@@ -1,0 +1,57 @@
+* {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 20px;
+}
+
+.first-ass p {
+    text-shadow: 1px 1px rgb(246, 67, 102),
+        2px 2px rgb(67, 130, 246),
+        3px 3px rgb(177, 83, 253);
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.one {
+    text-transform: uppercase;
+}
+
+.two {
+    text-transform: capitalize;
+}
+
+.three {
+    text-transform: lowercase;
+}
+
+/* Third Assignment */
+.first,
+.second,
+.third {
+    text-transform: none;
+    width: 400px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #eee;
+    text-align: left;
+}
+
+.third {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* The fourth assignment */
+.fourth-ass a {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px 50px;
+    /* width: 200px; */
+    font-size: 40px;
+    color: white;
+    background-color: #009688;
+    border-bottom: 10px solid #00514a;
+    text-decoration: none;
+    text-transform: capitalize;
+}

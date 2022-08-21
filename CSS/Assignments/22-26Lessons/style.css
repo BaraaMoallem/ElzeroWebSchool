@@ -1,0 +1,90 @@
+.the-first-div {
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    border: 5px solid #ff5d2b;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.the-second-div {
+    font-family: 'Open Sans', sans-serif;
+    padding: 20px;
+    border: 5px solid #159f92;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.p-ass1 {
+    background-color: #ddd;
+    text-align: center;
+    border: inherit;
+    padding: inherit;
+}
+
+/* The Second Assignment */
+.p-1,
+.p-2,
+.p-3 {
+    font-size: 2em;
+}
+
+.p-1 {
+    font-family: 'Open Sans', sans-serif;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.p-2 {
+    font-family: 'Cairo', sans-serif;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    /* font-style: italic; */
+    text-transform: uppercase;
+}
+
+.p-3 {
+    font-family: 'Jomhuria', cursive;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    font-weight: 400;
+    /* font-style: italic; */
+    text-transform: uppercase;
+}
+
+/* The Third Assignment */
+html {
+    font-size: 20px;
+}
+
+.p-4,
+.p-5,
+.p-6 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 30px auto;
+    text-align: center;
+    font-weight: 520;
+    text-transform: uppercase;
+    line-height: 1.6em;
+}
+
+.p-4 {
+    font-size: 2.5rem;
+}
+
+.p-5 {
+    font-size: 2rem;
+}
+
+.p-6 {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bodyHeight: 80vmin;
+    --bodyWidth: 90vmin;
+    --yellowHeight: calc((var(--bodyHeight) / 7)*50/100);
+    --yellowWidth: calc((var(--bodyHeight) / 7)*50/100);
+    --black: #323234;
+    --white: #fefefc;
+    --yellowMarginY: calc(((var(--bodyHeight) / 7) - var(--yellowHeight)) / 2);
+    --yellowMarginX: calc(((((var(--bodyWidth) - 10vmin) / 2) / 4) - var(--yellowWidth)) / 2);
+    --translateXForE: calc((((var(--bodyWidth) - 10vmin) / -2) / 4) * 3);
+}
+
+body {
+    width: var(--bodyWidth);
+    height: var(--bodyHeight);
+    margin: 5vh auto;
+    display: grid;
+    background-color: var(--white);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "E L";
+    gap: 10vmin;
+}
+
+.E {
+    grid-area: E;
+    background-color: var(--white);
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(4, 1fr);
+    grid-template-areas:
+        "bh bv bv bv"
+        "bh . . ."
+        "bh . . ."
+        "bh bv2 bv2 bv2"
+        "bh . . . "
+        "bh . . ."
+        "bh bv3 bv3 bv3";
+    position: relative;
+}
+
+.L {
+    grid-area: L;
+    background-color: var(--white);
+    display: grid;
+    grid-template: repeat(7, 1fr) / repeat(4, 1fr);
+    grid-template-areas:
+        "bhl . . ."
+        "bhl . . ."
+        "bhl . . ."
+        "bhl . . ."
+        "bhl . . . "
+        "bhl . . ."
+        "bhl bvl bvl bvl";
+    position: relative;
+
+}
+
+.bv {
+    grid-area: bv;
+    background-color: var(--black);
+}
+
+.bv2 {
+    grid-area: bv2;
+    background-color: var(--black);
+}
+
+.bv3 {
+    grid-area: bv3;
+    background-color: var(--black);
+}
+
+.bh {
+    grid-area: bh;
+    background-color: var(--black);
+}
+
+.bvl {
+    grid-area: bvl;
+    background-color: var(--black);
+}
+
+.bhl {
+    grid-area: bhl;
+    background-color: var(--black);
+}
+
+/* Animation area */
+/* Letter E stuff */
+.orangeE {
+    background-color: orange;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: var(--yellowHeight);
+    width: var(--yellowWidth);
+    margin: var(--yellowMarginY) var(--yellowMarginX);
+    animation: letterE 3s linear 4s 1 forwards running;
+}
+
+@keyframes letterE {
+    11.11% {
+        transform: translate(var(--translateXForE), 0px);
+    }
+
+    22.22% {
+        transform: translate(var(--translateXForE), calc((var(--bodyHeight)/7)*3));
+    }
+
+    33.33% {
+        transform: translate(0, calc((var(--bodyHeight)/7)*3));
+    }
+
+    44.44% {
+        transform: translate(var(--translateXForE), calc((var(--bodyHeight)/7)*3));
+    }
+
+    55.55% {
+        transform: translate(var(--translateXForE), calc((var(--bodyHeight)/7)*6));
+    }
+
+    66.66% {
+        transform: translate(0, calc((var(--bodyHeight)/7)*6));
+    }
+
+    77.77% {
+        transform: translate(var(--translateXForE), calc((var(--bodyHeight)/7)*6));
+    }
+
+    88.88% {
+        transform: translate(var(--translateXForE), 0px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Letter L stuff */
+.orangeL {
+    background-color: orange;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: var(--yellowHeight);
+    width: var(--yellowWidth);
+    margin: var(--yellowMarginY) var(--yellowMarginX);
+    animation: letterL 3s linear 1s 1 forwards running;
+}
+
+@keyframes letterL {
+    30% {
+        transform: translate(var(--translateXForE), 0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translate(var(--translateXForE), calc((var(--bodyHeight) / -7)*6));
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--translateXForE), calc((var(--bodyHeight) / -7)*6));
+        opacity: 0;
+    }
+}
+
+/* You reached vid num 80 and finished it in the playlist,
+You need to check your answers for animation assignments from codepen, */

@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+.sec {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 5px solid #2490fe;
+    border-bottom-color: transparent;
+    animation: rotate 1s linear 0s infinite forwards paused;
+}
+
+.sec::before {
+    content: '';
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #fca100;
+    border-bottom-color: transparent;
+    animation: rotate 2s linear 0s infinite forwards paused;
+}
+
+.sec::after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    animation: rotate 3s linear 0s infinite forwards paused;
+}
+
+.sec:hover,
+.sec:hover::after,
+.sec:hover::before {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* The Challenge */
+.challenge {
+    width: 75vmin;
+    height: 65vmin;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: 'e l';
+    gap: 5vmin;
+}
+
+.e {
+    grid-area: e;
+    display: grid;
+    grid-template-areas:
+        'bh bv bv bv'
+        'bh . . .'
+        'bh . . .'
+        'bh bv2 bv2 bv2'
+        'bh . . .'
+        'bh . . .'
+        'bh bv3 bv3 bv3'
+    ;
+    position: relative;
+}
+
+.e::before {
+    content: '';
+    width: 6vmin;
+    height: 6vmin;
+    background-color: #fea604;
+    position: absolute;
+    top: calc(((65vmin / 7) - 6vmin) / 2);
+    right: 1.375vmin;
+    animation: e 6s linear 0s infinite forwards running;
+}
+
+.l {
+    grid-area: l;
+    display: grid;
+    grid-template-areas:
+        'bh2 . . .'
+        'bh2 . . .'
+        'bh2 . . .'
+        'bh2 . . .'
+        'bh2 . . .'
+        'bh2 . . .'
+        'bh2 bv4 bv4 bv4'
+    ;
+    position: relative;
+}
+
+.l::before {
+    content: '';
+    width: 6vmin;
+    height: 6vmin;
+    background-color: #fea604;
+    position: absolute;
+    bottom: calc(((65vmin / 7) - 6vmin) / 2);
+    right: 1.375vmin;
+    animation: l 6s linear 0s infinite forwards running;
+}
+
+.bv {
+    grid-area: bv;
+    background-color: #323534;
+}
+
+.bv2 {
+    grid-area: bv2;
+    background-color: #323534;
+}
+
+.bv3 {
+    grid-area: bv3;
+    background-color: #323534;
+}
+
+.bv4 {
+    grid-area: bv4;
+    background-color: #323534;
+}
+
+.bh {
+    grid-area: bh;
+    background-color: #323534;
+}
+
+.bh2 {
+    grid-area: bh2;
+    background-color: #323534;
+}
+
+@keyframes e {
+    10% {
+        transform: translate(calc((35vmin/-4)*3), 0);
+    }
+
+    15% {
+        transform: translate(calc((35vmin/-4)*3), calc((65vmin / 7) * 3));
+    }
+
+    20% {
+        transform: translate(0, calc((65vmin / 7) * 3));
+    }
+
+    25% {
+        transform: translate(calc((35vmin/-4)*3), calc((65vmin / 7) * 3));
+    }
+
+    30% {
+        transform: translate(calc((35vmin/-4)*3), calc((65vmin / 7) * 6));
+    }
+
+    35% {
+        transform: translate(0, calc((65vmin / 7) * 6));
+    }
+
+    40% {
+        transform: translate(calc((35vmin/-4)*3), calc((65vmin / 7) * 6));
+    }
+
+    45% {
+        transform: translate(calc((35vmin/-4)*3), 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes l {
+    0% {
+        transform: translate(0);
+        opacity: 0;
+    }
+
+    55% {
+        transform: translate(0);
+        opacity: 0;
+    }
+
+    65% {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(calc((35vmin/-4)*3), 0);
+        opacity: 1;
+    }
+
+    85% {
+        transform: translate(calc((35vmin/-4)*3), calc((65vmin / -7) * 6));
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(calc((35vmin/-4)*3), calc((65vmin / -7) * 6));
+        opacity: 0;
+    }
+}

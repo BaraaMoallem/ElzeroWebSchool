@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+.ass-1,
+.ass-2,
+.ass-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh/3);
+}
+
+.ass-1 div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #ea1b5c;
+    border-right: 5px solid transparent;
+    animation-duration: 1s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+.ass-1 div::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #2299ee;
+    border-left: 5px solid transparent;
+    position: absolute;
+    transform: translate(-15px, -15px);
+}
+
+.ass-1 div::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 5px solid #fca600;
+    border-top: 5px solid transparent;
+    position: absolute;
+    transform: translate(-22.5px, -22.5px);
+}
+
+.ass-1 div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* The Second Assignment */
+
+.child {
+    width: 80px;
+    position: absolute;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ass-2 .one {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #2299ee;
+    border-bottom-color: transparent;
+    -webkit-animation: rotate 1s linear 0s infinite forwards none running;
+    animation: rotate2 1s linear 0s infinite forwards paused;
+    /* the animation property didn't work when I used none value for fill-mode */
+}
+
+.ass-2 .child:hover div {
+    animation-play-state: running;
+}
+
+/* I couldn't these in one code for some reason */
+
+.ass-2 .two {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 5px solid #fca600;
+    border-bottom-color: transparent;
+    position: absolute;
+    animation: rotate2 2s linear 0s infinite forwards paused;
+}
+
+.ass-2 .three {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    position: absolute;
+    animation: rotate2 3s linear 0s infinite forwards paused;
+}
+
+@keyframes rotate2 {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/* I couldn't make before and after psuedo elements play slower than div because animation-duration propery didn't seem to work */
+/* I used new divs to solve the problem.. check what other did */
+
+/* The Third Assignment */
+.ass-3 span {
+    width: 50px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 5px solid #000;
+    border-right-color: transparent;
+    animation: rotate2 1s cubic-bezier(0.0, 0.0, 1.0, 1.0) 0s infinite reverse running;
+}

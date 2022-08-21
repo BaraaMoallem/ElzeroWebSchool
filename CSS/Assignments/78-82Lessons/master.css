@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    margin: 20px 10vmax;
+    font: 200 20px arial;
+    color: green;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+div.main.red {
+    color: red;
+}
+
+/* The Second Assignment */
+.parent>div.child:last-child {
+    color: red;
+}
+
+/* The Third Assignment */
+div.parent:nth-child(2)>div.baby:first-child {
+    color: red;
+}
+
+/* The Fourth Assignment */
+body>div:nth-of-type(4)>div:nth-child(n+4):not(:nth-child(n+7)) {
+    color: red;
+}
+
+/* The Fifth Assignment */
+body>div:nth-of-type(n+5):not(:nth-of-type(n+11)):not(:nth-of-type(5), :nth-of-type(n+7))>div:nth-child(2):not(:nth-of-type(2)) {
+    color: red;
+}
+
+/* The Fifth Assignment in Another way */
+body>div:nth-of-type(12)>div {
+    color: red;
+}
+
+/* The Sixth Assignment */
+body>div:nth-of-type(17)>div:nth-of-type(1)>div:nth-child(3),
+div:nth-of-type(2)>div:nth-child(4) {
+    color: red;
+}
+
+/* The Seventh Assignment */
+body>div:nth-of-type(18)>div:nth-child(1)>div:nth-child(5) {
+    color: red;
+}
+
+/* The Eighth Assignment */
+body>div:not(:nth-of-type(-n+18)) :not(:nth-child(1), :nth-child(4), :nth-child(7), :nth-child(6)) {
+    color: red;
+}

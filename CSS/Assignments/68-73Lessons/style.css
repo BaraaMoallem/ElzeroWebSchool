@@ -1,0 +1,165 @@
+:root {
+    --mainColor: white;
+    --firstColor: #ff5722;
+    --secColor: #009688;
+    --thirdColor: #607d8b;
+    --fourthColor: #fa3664;
+    --fifthColor: #1692fc;
+    --mainFont: bold 40px serif;
+    --secFont: 500 30px arial;
+    --mainMargin: 50px auto;
+}
+
+/* The First Assignment */
+.ass-2 h1,
+.ass-1 h1 {
+    width: 150px;
+    height: 100px;
+    margin: var(--mainMargin);
+    background-color: var(--firstColor);
+    font: var(--mainFont);
+    color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ass-1 h1::before {
+    content: '';
+    background-color: var(--firstColor);
+    width: inherit;
+    height: inherit;
+    transform: skew(10deg, 10deg);
+    position: absolute;
+    z-index: -1;
+}
+
+.ass-1 h1::after {
+    content: '';
+    background-color: var(--firstColor);
+    width: inherit;
+    height: inherit;
+    transform: skew(-10deg, -10deg);
+    position: absolute;
+    z-index: -1;
+}
+
+/* The Second Assignment */
+.ass-2 h1 {
+    background-color: var(--secColor);
+}
+
+.ass-2 h1::before,
+.ass-2 h1::after {
+    content: '';
+    width: 15%;
+    height: inherit;
+    position: absolute;
+    left: -10px;
+    background-color: var(--secColor);
+    transform: skew(10deg, 0deg);
+}
+
+.ass-2 h1::after {
+    left: -40;
+}
+
+/*
+The Third Assignment
+.class {
+    matrix(3, 0.2679, 0, 3, 20, 100);
+     transform: scaleX(3) skewY(15deg) skewX(0) scaleY(3) translateX(20px) translateY(100px);
+}
+*/
+
+/* The Fourth Assignment */
+.ass-4 div {
+    width: 200px;
+    height: 170px;
+    margin: 200px auto;
+    font: var(--secFont);
+    background-color: var(--thirdColor);
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+.ass-4 div::before {
+    content: '';
+    width: 135px;
+    height: 135px;
+    transform: translate(0, -70px) rotate(45deg);
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    left: 30px;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+.ass-4 div::after {
+    content: "elzero";
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: medium;
+    color: white;
+    margin: 5px 10px;
+}
+
+/* The Fifth Assignment */
+.ass-5 div {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.ass-5 div:hover {
+    transform: rotateX(180deg);
+}
+
+.ass-5 .Y:hover {
+    transform: rotateX(0) rotateY(180deg);
+}
+
+.ass-5 div::before {
+    content: 'Front';
+    width: 200px;
+    height: 200px;
+    background-color: var(--fourthColor);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 30px arial;
+}
+
+.ass-5 div::after {
+    content: 'Back';
+    width: 200px;
+    height: 200px;
+    background-color: var(--fifthColor);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateX(180deg) translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 30px arial;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.ass-5 .Y::after {
+    transform: translate(-50%, -50%) rotateY(180deg);
+}
